@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flood Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="container">
+
+        <h1>🌧 Flood Prediction System</h1>
+
+        <form action="/predict" method="POST">
+
+            <input type="number" name="Temp" placeholder="Temperature" required>
+
+            <input type="number" name="Humidity" placeholder="Humidity" required>
+
+            <input type="number" name="Cloud" placeholder="Cloud Cover" required>
+
+            <input type="number"
+                   step="0.01"
+                   name="Annual"
+                   placeholder="Annual Rainfall"
+                   required>
+
+            <input type="number"
+                   step="0.01"
+                   name="AvgJune"
+                   placeholder="Average June Rainfall"
+                   required>
+
+            <input type="number"
+                   step="0.01"
+                   name="Sub"
+                   placeholder="Sub Rainfall"
+                   required>
+
+            <button type="submit">
+                Predict Flood
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
